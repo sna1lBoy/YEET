@@ -1,0 +1,24 @@
+// YEET delete from given node
+function YEET(node) {
+    if (node.nodeType === Node.TEXT_NODE) {
+        const regex = new RegExp("\\b" + "delete" + "\\b", "gi");
+        node.nodeValue = node.nodeValue.replace(regex, "YEET");
+    } else if (node.nodeType === Node.ELEMENT_NODE) {
+        for (let i = 0; i < node.childNodes.length; i++) {
+            YEET(node.childNodes[i]);
+        }
+    }
+}
+
+// check for new mutation
+const observer = new MutationObserver(mutations => {
+    mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(addedNode => {
+            YEET(addedNode);
+        });
+    });
+});
+observer.observe(document, { childList: true, subtree: true });
+
+// replace delete in the new document body
+YEET(document.body);
