@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "YEET",
-  "version": "1",
+  "version": "2",
   "description": "YEET",
   "icons": {"48": "icons/YEET48.png", "96": "icons/YEET96.png"},
   "permissions": ["activeTab"],
