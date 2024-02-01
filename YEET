@@ -1,7 +1,7 @@
 console.log("AAAAAAAAAAAAAAAAAA");
 
 // set up word pairs
-let AAAAAAAAAAAAAAAAA = [["delete", "YEET"], ["deleted", "YEETED"], ["deleting", "YEETING"], ["deletable", "YEETABLE"]]
+let AAAAAAAAAAAAAAAAA = [["delete", "YEET"], ["deleted", "YEETED"], ["deleting", "YEETING"], ["deletable", "YEETABLE"], ["deletes", "YEETS"], ["deletions", "YEETIONS"], ["deletion", "YEETION"]]
 
 // YEET delete from given node
 function YEET(node, oldWord, newWord) {
