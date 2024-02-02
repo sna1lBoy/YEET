@@ -9,13 +9,13 @@ const AAAAAAAAAAAAAAAAA = [
     [["deletes", "removes"], "YEETS"],
     [["deletions"], "YEETIONS"],
     [["deletion"], "YEETION"],
-    [["undelete", "unremove"], "UNYEET"],
-    [["undeleted", "unremoved"], "UNYEETED"],
-    [["undeleting", "unremoving"], "UNYEETING"],
-    [["undeletable", "unremovable"], "UNYEETABLE"],
-    [["undeletes", "unremoves"], "UNYEETS"],
-    [["undeletions"], "UNYEETIONS"],
-    [["undeletion"], "UNYEETION"]
+    [["undelete", "unremove", "restore"], "UNYEET"],
+    [["undeleted", "unremoved", "restored"], "UNYEETED"],
+    [["undeleting", "unremoving", "restoring"], "UNYEETING"],
+    [["undeletable", "unremovable", "restorable"], "UNYEETABLE"],
+    [["undeletes", "unremoves", "restores"], "UNYEETS"],
+    [["undeletions", "restorations"], "UNYEETIONS"],
+    [["undeletion", "restoration"], "UNYEETION"]
 ];
 
 // YEET delete from given node
