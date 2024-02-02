@@ -2,13 +2,20 @@ console.log("AAAAAAAAAAAAAAAAAA");
 
 // set up word pairs
 const AAAAAAAAAAAAAAAAA = [
-  ["delete", "YEET"],
-  ["deleted", "YEETED"],
-  ["deleting", "YEETING"],
-  ["deletable", "YEETABLE"],
-  ["deletes", "YEETS"],
-  ["deletions", "YEETIONS"],
-  ["deletion", "YEETION"]
+    [["delete", "remove"], "YEET"],
+    [["deleted", "removed"], "YEETED"],
+    [["deleting", "removing"], "YEETING"],
+    [["deletable", "removable"], "YEETABLE"],
+    [["deletes", "removes"], "YEETS"],
+    [["deletions"], "YEETIONS"],
+    [["deletion"], "YEETION"],
+    [["undelete", "unremove"], "UNYEET"],
+    [["undeleted", "unremoved"], "UNYEETED"],
+    [["undeleting", "unremoving"], "UNYEETING"],
+    [["undeletable", "unremovable"], "UNYEETABLE"],
+    [["undeletes", "unremoves"], "UNYEETS"],
+    [["undeletions"], "UNYEETIONS"],
+    [["undeletion"], "UNYEETION"]
 ];
 
 // YEET delete from given node
@@ -27,15 +34,19 @@ function YEET(node, oldWord, newWord) {
 const observer = new MutationObserver(mutations => {
     mutations.forEach(mutation => {
         mutation.addedNodes.forEach(addedNode => {
-            for (const [oldWord, newWord] of AAAAAAAAAAAAAAAAA) {
-                YEET(addedNode, oldWord, newWord);
-      	    }        
+            for (const [oldWords, newWord] of AAAAAAAAAAAAAAAAA) {
+                for (const oldWord of oldWords) {
+                    YEET(addedNode, oldWord, newWord);
+                }
+            }
         });
     });
 });
 observer.observe(document, { childList: true, subtree: true });
 
 // replace delete in the new document body
-for (const [oldWord, newWord] of AAAAAAAAAAAAAAAAA) {
-  YEET(document.body, oldWord, newWord);
+for (const [oldWords, newWord] of AAAAAAAAAAAAAAAAA) {
+    for (const oldWord of oldWords) {
+        YEET(document.body, oldWord, newWord);
+    }
 }
